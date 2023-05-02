@@ -15,3 +15,6 @@ use App\Http\Controllers\FrontController;
 */
 
 Route::get('/', [FrontController::class, 'index']);
+Route::get('/add-country', [FrontController::class, 'addCountry']);
+Route::get('/countries', [FrontController::class, 'listCountry']);
+Route::get('/country-edit/{id}', [FrontController::class, 'EditCountry']);

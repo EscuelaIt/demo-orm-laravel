@@ -18,3 +18,8 @@ Route::get('/', [FrontController::class, 'index']);
 Route::get('/add-country', [FrontController::class, 'addCountry']);
 Route::get('/countries', [FrontController::class, 'listCountry']);
 Route::get('/country-edit/{id}', [FrontController::class, 'EditCountry']);
+
+Route::get('/add-customer/{name}', [FrontController::class, 'addCustomer']);
+Route::get('/customers', [FrontController::class, 'listCustomer']);
+Route::get('/customers-remove/{id}', [FrontController::class, 'removeCustomer']);
+

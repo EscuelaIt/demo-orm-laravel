@@ -9,7 +9,15 @@
 <body>
   <ul>
   @foreach($countries as $country)
-    <p>{{ $country->id }}: {{ $country->name }} - {{ $country->currency }}</p>
+    <li>
+      {{ $country->id }}: {{ $country->name }} - {{ $country->currency }}
+      <br>
+      @foreach($country->customers as $customer)
+        <span style="font-size: 0.8rem; opacity: 0.5">
+          {{ $customer->name }}{{ $loop->last ? '' : ', ' }}
+        </span>
+      @endforeach
+    </li>
   @endforeach
 </body>
 </html>

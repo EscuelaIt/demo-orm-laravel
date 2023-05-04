@@ -55,7 +55,11 @@ class FrontController extends Controller
     }
 
     public function listCustomer() {
-        //$customers = Customer::with(['country'])->where('name', 'Maria')->get();
+        // $customers = Customer
+        //     ::with(['country'])
+        //     ->where('name', 'Maria')
+        //     ->where('country_id', '5')
+        //     ->get();
         $customers = Customer::with(['country'])->get();
         return view('customers-list')->with([
             'customers' => $customers,
